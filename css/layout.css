@@ -1,0 +1,347 @@
+/*==============================
+=            Global            =
+==============================*/
+
+body {
+    background-color:#000;
+    font-size:14px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,h2{
+    font-size:22px;
+    font-weight:normal;
+    padding-left:5px;
+}
+h1 {
+    font-size:28px;
+}
+
+
+header, footer {
+    background-color:#17575c;
+    color:#fff;
+}
+
+.main-body h1 {
+    color:#fff;
+    background-color:#6d3535;
+    font-size:28px;
+}
+
+.main-body {
+    background-color:#fff;
+}
+
+.table th, .table td {
+     border-top: none;
+ }
+
+.page {
+    background: #6d3535;
+    color: #fff;
+    border: 0px;
+    border-radius: 0px;
+ }
+.page:hover {
+    background: #17575c;
+    color: #fff;
+ }
+
+
+/*-----  End of Global  ------*/
+
+/*==================================
+=            Navigation            =
+==================================*/
+
+.navigation-container {
+    width: 100%;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.navigation-container ul {
+    list-style-type: none; /*to remove bullets*/
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
+    display:table;
+    overflow: hidden;
+}
+.navigation-container li {
+    float: left;
+    padding: 2px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navigation-container li a {
+    color:#fff;
+}
+
+.social-icons {
+    text-align:right;
+}
+.social-icons span {
+    color:#fff;
+}
+
+/*-----  End of Navigation  ------*/
+
+/*================================
+=            Homepage            =
+================================*/
+
+.homepage-attention {
+    background-image:url('../images/backgrounds/homepage.png');
+    padding-bottom:10px;
+}
+
+.homepage-attention .secondary-content {
+    background-color:rgba(255,255,255,.9);
+}
+
+#next-game {
+    padding:5px;
+}
+#next-game h2 {
+    background-color:#17575c;
+    color:#fff;
+}
+
+/* Standings Section */
+#league-standings h2 {
+    background-color:#17575c;
+    color:#fff;
+}
+
+/* News Section */
+#news h2 {
+    background-color:#6d3535;
+    color:#fff;
+}
+
+#table-striped {
+    /*font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;*/
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#table-striped th {
+    /*font-size: 14px;*/
+    font-weight: normal;
+    /*padding: 10px 8px;*/
+    /*color: #039;*/
+}
+#table-striped td {
+    /*padding: 8px;*/
+    /*color: #669;*/
+}
+#table-striped .odd {
+    background: #e1e1e1;
+}
+
+/*-----  End of Homepage  ------*/
+
+/*==================================
+=            Statistics            =
+==================================*/
+
+table.tablesorter thead tr .header {
+    /*background-image: url(bg.gif);*/
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(../images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #17575c;
+color: #fff;
+}
+
+/*-----  End of Statistics  ------*/
+
+/*====================================
+=            Contact Form            =
+====================================*/
+
+.contactForm {
+    padding-top: 25px;
+}
+.contactForm input,
+.contactForm textarea {
+    margin: 1px auto;
+    padding: 10px;
+    display: block;
+    width: 500px;
+    border-radius: 0px;
+}
+
+.contactForm input[type="submit"] {
+    background-color:#6d3535;
+    color:#fff;
+    width: 522px;
+    border:0px;
+
+    -webkit-transition: all 400ms ease-out 0s;
+       -moz-transition: all 400ms ease-out 0s;
+         -o-transition: all 400ms ease-out 0s;
+            transition: all 400ms ease-out 0s;
+}
+
+.contactForm input[type="submit"]:hover {
+    background-color:#17575c;
+    color:#fff;
+}
+
+/*-----  End of Contact Form  ------*/
+
+/*============================
+=            Team            =
+============================*/
+
+.player
+{
+    margin: 6px;
+}
+
+.team-members .player {
+    width:180px;
+}
+
+/*-----  End of Team  ------*/
+
+/*================================
+=            Sponsors            =
+================================*/
+
+.sponsorImg {
+    border: 2px solid #6d3535;
+    padding: 20px;
+}
+
+.grid {
+    padding: 20px 20px 100px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+.grid li {
+    display: inline-block;
+    width: 440px;
+    margin: 0;
+    padding: 50px;
+    text-align: left;
+    position: relative;
+}
+
+.grid figure {
+    margin: 0;
+    position: relative;
+}
+
+.grid figure img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
+
+.grid figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    /*background: #17575c;*/
+    background: #6d3535;
+    /*color: #6d3535;*/
+    color: #17575c;
+}
+
+.grid figcaption h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.grid figcaption span:before {
+    content: 'by ';
+}
+
+.grid figcaption a {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    /*background: #6d3535;*/
+    background: #17575c;
+    color: #fff;
+}
+
+.sponsorStyle figcaption {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.no-touch .sponsorStyle figure:hover figcaption,
+.sponsorStyle figure.cs-hover figcaption {
+    opacity: 1;
+    -webkit-transform: translate(15px, 15px);
+    -moz-transform: translate(15px, 15px);
+    -ms-transform: translate(15px, 15px);
+    transform: translate(15px, 15px);
+}
+
+.sponsorStyle figcaption h3 {
+    margin-top: 1px;
+}
+
+.sponsorStyle figcaption span {
+    display: block;
+}
+
+.sponsorStyle figcaption a {
+    margin-top: 30px;
+}
+
+/*-----  End of Sponsors  ------*/
+
+/*==============================
+=            Footer            =
+==============================*/
+
+footer ul {
+    list-style-type: none;
+}
+footer li {
+    padding:5px;
+}
+
+footer .navigation-container {
+    padding-top:10px;
+}
+
+/*-----  End of Footer  ------*/
+
+

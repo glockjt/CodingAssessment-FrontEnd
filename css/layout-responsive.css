@@ -1,0 +1,22 @@
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.contactForm input,
+	.contactForm textarea {
+	    max-width: 700px;
+	}
+
+	.contactForm input[type="submit"] {
+	    max-width: 722px;
+	}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.contactForm input,
+	.contactForm textarea {
+	    max-width: 200px;
+	}
+
+	.contactForm input[type="submit"] {
+	    max-width: 222px;
+	}
+}

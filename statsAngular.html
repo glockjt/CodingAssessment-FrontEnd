@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="App">
+	<head>
+		<title>GiftCards.com - Schedule - Coding Assessment - Front End Developers</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"> -->
+		<link href="/css/layout.css" rel="stylesheet">
+
+
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.tablesorter.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.min.css">
+		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+		  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+		  <script src="app.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="container">
+						<div class="row" style="margin:10px auto;">
+							<div class="span8 navigation-container">
+								<ul>
+									<li><a href="/">Home</a></li>
+									<li><a href="/contactus.html">Contact Us</a></li>
+									<li><a href="/sponsors.html">Sponsors</a></li>
+									<li><a href="/stats.html">Statistics</a></li>
+									<li><a href="/team.html">Team</a></li>
+								</ul>
+							</div>
+							<div class="span4 social-icons">
+								<span class="icon-facebook icon-2x"></span>
+								<span class="icon-twitter icon-2x"></span>
+								<span class="icon-google-plus icon-2x"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<a href="/"><img src="images/logo.png" style="padding:5px;" /></a>
+				</div>
+			</div>
+		</div>
+		<div ng-controller="tableCtrl" class="container main-body">
+			<div class="row">
+				<div class="span12">
+					<div style="padding:5px;">
+						<h1>Team Statistics</h1>
+						<strong>Search:</strong> <input ng-model="searchText">
+						<table class="table table-striped tablesorter">
+							<thead>
+								<tr>
+									<th>Number</th>
+									<th>Name</th>
+									<th>Position</th>
+									<th>GP</th>
+									<th>G</th>
+									<th>A</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="player in players | filter:searchText | startFrom:currentPage*pageSize | limitTo:pageSize">
+									<td>{{player.number}}</td>
+									<td>{{player.name}}</td>
+									<td>{{player.position}}</td>
+									<td>{{player.GP}}</td>
+									<td>{{player.G}}</td>
+									<td>{{player.A}}</td>
+								</tr>
+							</tbody>
+						</table>
+						<button class="btn page" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+					        Previous
+					    </button>
+					    {{currentPage+1}}/{{numberOfPages()}}
+					    <button class="btn page" ng-disabled="currentPage >= players.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+					        Next
+					    </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="container">
+						<div class="row">
+							<div class="span9 navigation-container">
+								<ul>
+									<li><a href="/">Home</a></li>
+									<li><a href="/contactus.html">Contact Us</a></li>
+									<li><a href="/sponsors.html">Sponsors</a></li>
+									<li><a href="/stats.html">Statistics</a></li>
+									<li><a href="/team.html">Team</a></li>
+								</ul>
+							</div>
+
+							<div class="span3">
+								Pittsburgh Grizzlies<br />
+								Console Energy Center<br />
+								1001 Fifth Avenue,<br />
+								Pittsburgh, PA 15219<br />
+								412.642.1800<br />
+								info@pghgrizzlies.com<br />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			$(document).ready(function()
+			{
+				$('.tablesorter').tablesorter();
+			});
+		</script>
+	</body>
+</html>
